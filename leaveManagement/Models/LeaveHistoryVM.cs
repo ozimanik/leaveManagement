@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using leaveManagement.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +22,7 @@ namespace leaveManagement.Models
         [Required]
         public DateTime EndDate { get; set; }
 
-        public DetailsLeaveTypeVM LeaveType { get; set; }
+        public LeaveType LeaveType { get; set; }
 
         public int LeaveTypeId { get; set; }
 

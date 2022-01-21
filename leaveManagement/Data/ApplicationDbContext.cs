@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using leaveManagement.Data.Migrations;
+using leaveManagement.Models;
 
 namespace leaveManagement.Data
 {
@@ -18,5 +19,6 @@ namespace leaveManagement.Data
         public DbSet<LeaveHistory> LeaveHistories { get; set; }
         public DbSet<LeaveType> LeaveTypes { get; set; }
         public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
+        public DbSet<leaveManagement.Models.LeaveTypeVM> DetailsLeaveTypeVM { get; set; }
     }
 }
