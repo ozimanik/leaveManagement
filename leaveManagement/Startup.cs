@@ -1,6 +1,7 @@
 using AutoMapper;
 using leaveManagement.Contracts;
 using leaveManagement.Data;
+using leaveManagement.Data.Migrations;
 using leaveManagement.Mappings;
 using leaveManagement.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -43,7 +44,7 @@ namespace leaveManagement
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<Employee>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -55,7 +56,7 @@ namespace leaveManagement
         public void Configure(
             IApplicationBuilder app,
             IWebHostEnvironment env,
-            UserManager<IdentityUser> userManager,
+            UserManager<Employee> userManager,
             RoleManager<IdentityRole> roleManager
             )
         {

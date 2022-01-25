@@ -16,7 +16,7 @@ namespace leaveManagement.Controllers
     public class LeaveTypesController : Controller
     {
 
-        private ILeaveTypeRepository _repo;
+        private readonly ILeaveTypeRepository _repo; //interface readonly
         private readonly IMapper _mapper;
 
         public LeaveTypesController(ILeaveTypeRepository repo, IMapper mapper)
